@@ -1,0 +1,1315 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+    font-family: Poppins;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #fdf8f8;
+}
+
+header {
+    margin: auto;
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 500;
+    padding-top: 10px;
+}
+.nav {
+    display: flex;
+    top: -1%;
+    align-items: baseline;
+    justify-content: space-between;
+    background-color: #000000;
+    width: 70%;
+    position: absolute;
+    position: fixed;
+    padding: 15px 50px 10px;
+    border-radius: 10px;
+}
+
+/* ////////////////////////// */
+header .nav .Reminder {
+    font-size: 20px;
+}
+header .nav .Reminder i {
+    cursor: pointer;
+    color: whitesmoke;
+}
+header .nav .header-icon {
+    color: #fdf8f8;
+    font-size: 30px;
+    display: none;
+    cursor: pointer;
+}
+header .nav .logo {
+    font-weight: bold;
+    font-size: 30px;
+}
+header .nav .menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 500;
+}
+header .nav .menu li a:hover {
+    scale: 1.05;
+    color: #eac452;
+}
+header .nav .side-list {
+    display: none;
+}
+.menu li a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #fdf8f8;
+    transition: scale 0.2 ease;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.menu li a:hover {
+    scale: 1.2;
+}
+.menu li a:active {
+    scale: 0.95;
+}
+
+header .nav .btn {
+    width: 200px;
+    margin-right: -150px;
+    margin-bottom: 5px;
+}
+
+header .nav .btn1 {
+    text-align: center;
+    width: 80px;
+    height: 40px;
+    border: none;
+    margin-left: 12px;
+    border-radius: 15px;
+    font-size: 15px;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+    transition: scale 0.2 ease;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn1:hover {
+    background-color: #ffffff;
+    color: #000;
+    scale: 1.05;
+}
+.btn1:active {
+    scale: 0.95;
+}
+header .nav .join {
+    background-color: #eac452;
+    color: #ffffff;
+}
+header .nav .header-buttons {
+    width: 350px;
+}
+/* css slider */
+.slider {
+    height: 100vh;
+    margin-top: -10px;
+    position: relative;
+    background-color: #ffffff;
+}
+.slider .list .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .list .item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, #000 40%, transparent);
+}
+.slider .list .item .content {
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+}
+.slider .list .item .content p:nth-child(1) {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.slider .list .item .content h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+.slider .list .item.active {
+    opacity: 1;
+    z-index: 10;
+}
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3) {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+}
+.slider .list .item.active h2 {
+    animation-delay: 1s;
+}
+.slider .list .item.active p:nth-child(3) {
+    animation-duration: 1.3s;
+}
+.arrows {
+    position: absolute;
+    top: 30%;
+    right: 50px;
+    z-index: 50;
+}
+.arrows button {
+    background-color: #eee5;
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: #eee;
+    transition: 0.5s;
+}
+.arrows button:hover {
+    background-color: #eee;
+    color: black;
+}
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 250px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+}
+.thumbnail::-webkit-scrollbar {
+    width: 0;
+}
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    filter: brightness(0.5);
+    transition: 0.5s;
+    flex-shrink: 0;
+}
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.thumbnail .item.active {
+    filter: brightness(1.5);
+}
+.thumbnail .item .content {
+    position: absolute;
+    inset: auto 10px 10px 10px;
+}
+
+.bt {
+    top: 180%;
+}
+.bt1 {
+    background-color: rgba(0, 0, 0, 0.333);
+    margin-left: 700px;
+    color: #eee;
+}
+/* ////////////////////////////////////////////// */
+/* /////////////////section:Experience-cars///////////////////// */
+.Experience-cars {
+    width: 97%;
+    margin: 100px auto 0px;
+    font-size: 25px;
+    height: 700px;
+    color: #000;
+    height: auto;
+}
+.Experience-cars-title {
+    font-size: 30px;
+    margin-left: 40px;
+}
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0px auto;
+    filter: brightness(0.9);
+}
+.card1 {
+    margin: 130px auto;
+    margin-bottom: 0px;
+    width: 350px;
+    height: 500px;
+    background-image: url(/assets/img/72319609-2e22-4d62-87ff-0827b937f2ae.jpg);
+    background-size: cover;
+    border-radius: 12px;
+    box-shadow: 15px 20px 30px 1px black;
+    position: relative;
+}
+
+.card2 {
+    margin: 50px auto;
+    margin-bottom: 0px;
+    width: 350px;
+    height: 500px;
+    background-image: url(/assets/img/McLaren.jpg);
+    background-size: cover;
+    border-radius: 12px;
+    box-shadow: 15px 20px 30px 1px black;
+    position: relative;
+}
+
+.card3 {
+    margin: 130px auto;
+    margin-bottom: 0px;
+    width: 350px;
+    height: 500px;
+    background-image: url(/assets/img/15-Strangest.jpg);
+    background-size: cover;
+    border-radius: 12px;
+    box-shadow: 15px 20px 30px 1px black;
+    position: relative;
+}
+
+.info-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    line-height: -5px;
+}
+.info-price p a {
+    list-style-type: none;
+    text-decoration: none;
+    color: #eac452;
+}
+
+.info-card {
+    width: 300px;
+    height: 110px;
+    border-radius: 12px;
+    background-color: #00000086;
+    color: goldenrod;
+    font-size: 15px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    position: absolute;
+    padding: 10px;
+}
+.card-p {
+    display: block;
+    padding: 3px;
+    padding-left: 1px;
+}
+.fa-chevron-right {
+    font-size: 10px;
+}
+.p1 {
+    color: #fff;
+}
+/* //////////////////////////////products/////////////////////////// */
+.Our-Beast-Cars {
+    width: 97%;
+    margin: 100px auto;
+    color: #000;
+}
+/* Products Grid Styles */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Individual Product Styles */
+.product1 {
+    background: #f9f9f9;
+    border: 3px solid #eac452;
+    border-radius: 30px;
+    width: 30%;
+    height: 400px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.product1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image Styles */
+.pr1 {
+    width: 100%;
+    height: 55%;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+}
+
+.pr1 img {
+    width: 80%;
+    height: 88%;
+    position: absolute;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-left: 40px;
+    transition: transform 0.3s ease;
+}
+
+.product1:hover .pr1 img {
+    transform: scale(1.1);
+}
+
+/* Product Info Styles */
+.pr2 {
+    padding: 15px;
+    padding-bottom: 0px;
+    line-height: 15px;
+}
+.pr2-info i {
+    color: #eac452;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.pr2-p1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.pr2-info {
+    margin-left: 3px;
+    margin-right: 15px;
+    margin: 15px 3px 15px 15px;
+    margin-top: 50px;
+}
+
+.pr2-info-1 {
+    margin-top: 20px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #555;
+}
+.pr2-info-1 i {
+    color: #eac452;
+}
+.bi-star-fill,
+.bi-star-half {
+    color: #eac452;
+}
+.prs {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0d3ba0dc;
+    margin-bottom: 8px;
+}
+
+/* Planner Button Styles */
+.btn-planner {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #eac452;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* Product Link Button Styles */
+.product-link {
+    background-color: #ffffff;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    bottom: -3px;
+    right: -2.4px;
+    padding-right: 0px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: 3px solid #eac452;
+    border-bottom: none;
+    border-right: none;
+    overflow: hidden;
+}
+
+.product-link button {
+    width: 100%;
+    height: 95%;
+    background-color: #eac452;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    margin: 3px auto;
+    margin-left: 3px;
+    border-radius: 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Icon Styles */
+.pr1 div i {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* /////////////////////////add Auction/////////////////////////// */
+.auction {
+    width: 90%;
+    border: 3px solid #eac452;
+    border-radius: 12px;
+    margin: 100px auto;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 15px 20px 30px 1px black;
+    color: #000;
+    display: flex;
+}
+
+.auction-img {
+    background-image: url(/assets/img/add-auction-img.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 400px;
+    margin-left: 20px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+.action-info {
+    margin: 0px 50px;
+}
+.auction-title {
+    font-size: 35px;
+    font-size: 40px;
+}
+.auction-span {
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+.action-span1 {
+    width: auto;
+    margin: auto;
+}
+.add-product-btn {
+    display: block;
+    margin: 50px auto;
+    padding: 10px;
+    font-size: 30px;
+    background-color: #eac452;
+    width: 500px;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+}
+/* ///////////////////// Services //////////////////////////////// */
+.Services-section {
+    width: 97%;
+    margin: 100px auto;
+    color: #000;
+}
+
+.Services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    width: 97%;
+    position: relative;
+}
+
+.div1 {
+    margin: 50px auto;
+    width: 300px;
+    height: 330px;
+    padding: 35px;
+    border: 3px solid #eac452;
+    border-radius: 8px;
+    background-color: #fff;
+    line-height: 20px;
+    box-shadow: 15px 20px 50px 1px black;
+}
+.pp {
+    margin-top: 30px;
+}
+.bo {
+    font-size: 60px;
+    margin-top: 500px;
+    padding-bottom: 40px;
+    line-height: 20px;
+    color: #eac452;
+}
+.Services-title,
+.Our-Beast-cars-title {
+    margin-left: 40px;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+.divflow {
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+}
+.effect {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    border-radius: 900px 800px 200px;
+    background-color: #ff9d00;
+    box-shadow: 1px 1px 50px 200px #ff9d00;
+    opacity: 0.6;
+    margin: 200px 25%;
+    z-index: -1;
+}
+
+/* /////////////////footer section/////////////////// */
+
+.ftr {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    margin: 100px auto 0px auto;
+    color: #eac452;
+    height: 550px;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+.info-pages {
+    width: 35%;
+    text-align: center;
+    padding: 15px 0px;
+    margin-left: -30px;
+}
+.title-ftr-pages {
+    font-size: 30px;
+    padding-left: 35px;
+    margin-top: 12px;
+}
+.link {
+    text-decoration: none;
+    margin: 20px 0px;
+    color: #eac452;
+    line-height: 70px;
+    text-transform: capitalize;
+}
+
+.ftr-link {
+    list-style-type: none;
+}
+.info-input {
+    width: 500px;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: 30px;
+    position: relative;
+}
+.info-overflow {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.title-info-input {
+    font-weight: 800px;
+    font-size: 30px;
+    margin: 0px 0px 18px 0px;
+}
+.btn2 {
+    width: 200px;
+    display: block;
+    border-radius: 100px;
+    margin: 10px;
+    padding: 20px;
+}
+.bn {
+    background-color: #eac452;
+    width: 245px;
+}
+.ic {
+    font-size: 20px;
+    margin: 20px;
+    color: #eac452;
+}
+
+/* //////////////////live action//////////////////////// */
+.live-action {
+    display: flex;
+    background-color: #000;
+    margin-top: -10px;
+    height: auto;
+}
+.live-action .show-sction {
+    /* width: 80%;
+    height: 85vh; */
+    display: flex
+    ;
+    padding-top: 130px;
+    background-size: cover;
+    position: relative;
+    justify-content: space-evenly;
+
+}
+/* .live-action .show-sction .title-car,
+.live-action .show-sction .info-car,
+.live-action .show-sction .Opening-price {
+    position: absolute;
+} */
+.popup {
+    top: 10%;
+    left: 40%;
+    width: 500px;
+    position: fixed;
+    border-radius: 30px;
+    z-index: 100;
+    text-align: center;
+    padding: 0px 30px 30px;
+    color: #fdf8f8;
+    visibility: hidden;
+    z-index: 300;
+}
+.pp {
+    top: 10%;
+    color: #000;
+}
+.popup .content {
+    margin: 5px auto;
+}
+.popup .content .g {
+    margin-right: -500px;
+    font-size: 25px;
+}
+.popup .content h2 {
+    margin-top: 20px;
+    text-align: left;
+    color: #000;
+}
+.popup .content p a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+.popup input {
+    width: 30%;
+    margin-top: 20px;
+    padding: 10px 0px;
+    background-color: #990000;
+    border: 0;
+    border-radius: 12px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.open-popup {
+    visibility: visible;
+    width: 500px;
+    background-color: rgba(214, 214, 214, 0.522);
+    backdrop-filter: blur(50px);
+    border-radius: 30px;
+    padding: 30px 30px 30px;
+    color: #000000;
+}
+/* .live-action .show-sction .title-car {
+    top: 5%;
+    left: 12.5%;
+    display: inline;
+} */
+.live-action .show-sction .title-car h2 {
+    font-size: 25px;
+    display: inline;
+}
+.live-action .show-sction .pp {
+    display: inline;
+    margin-left: 15px;
+}
+.live-action .show-sction .info-car {
+    /* width: 40%;
+    top: 50%;
+    left: 12.5%; */
+    font-size: 15px;
+}
+.live-action .show-sction .info-car .clr {
+    color: #db7f2f;
+}
+
+.live-action .show-sction .Opening-price {
+    /* top: 5%;
+    left: 80%; */
+    text-align: center;
+    font-size: 20px;
+}
+.live-action .show-sction .Opening-price p {
+    color: #eac452;
+}
+/* ظظظظظظظظظظظظظظظظظظظظظظظظظظظظ */
+
+/* Popup Container Styling */
+.live-action .show-sction .flow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 600px;
+    height: 300px;
+    text-align: center;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    position: relative;
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #000;
+}
+
+/* Close Button Styling */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #eac452;
+}
+
+/* Popup Content Styling */
+.popup-page {
+    background-color: transparent;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 0;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Button Styling */
+.Auction-Participation,
+.View-Auction {
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 80%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Button Hover Effects */
+.Auction-Participation:hover,
+.View-Auction:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+/* Timer Styling */
+.timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    border: 5px dashed #990000;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Timer Text Styling */
+.timer p {
+    font-size: 20px;
+
+    font-weight: bold;
+    color: #990000;
+    width: 70px;
+    margin: 0px 15px 0px 0px;
+}
+
+/* Bidding Box Styling */
+.bidding {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    max-width: 400px;
+    border-radius: 10px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #990000;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .flow {
+        width: 90%;
+        padding: 30px 15px;
+    }
+
+    .Auction-Participation,
+    .View-Auction {
+        width: 100%;
+    }
+
+    .bidding {
+        width: 80%;
+    }
+}
+.live-action .show-sction .flow .winner-name .wn,
+.live-action .show-sction .flow .winner-name span,
+.live-action .show-sction .flow .open-auction .number {
+    color: #000000;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.live-action .show-sction .dive {
+    position: absolute;
+}
+
+.live-action .show-sction .flow .bidding .pay {
+    background-color: #990000;
+    width: auto;
+    height: 50px;
+
+    border-radius: 12px;
+    display: flex;
+    color: #ffffff;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 20px;
+}
+.live-action .show-sction .flow .bidding .pay input {
+    background-color: #990000;
+    color: #ffffff;
+    border: none;
+    height: 50px;
+    padding: 0px;
+    border-radius: 12px;
+    margin-right: 5px;
+    width: 15%;
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: bold;
+}
+.live-action .show-sction .flow .bidding .pay p {
+    margin: 0px;
+}
+/* Container Styling */
+.flow-bidding-box {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 20px;
+    right: 8%;
+    top: 74%;
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Pay Styling */
+.input-pay {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 5px 15px;
+}
+
+/* Buttons for Increasing and Decreasing */
+.decrease,
+.increase {
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.decrease:hover,
+.increase:hover {
+    color: #eac452;
+}
+
+/* Number Input Styling */
+.text {
+    height: 50px;
+    width: 60px;
+    text-align: center;
+    border: 2px solid #990000;
+    border-radius: 10px;
+    margin: 0 10px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+/* Bid Button Styling */
+.bid {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: #990000;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bid:hover {
+    background-color: #990000;
+    transform: translateY(-2px);
+}
+
+@media only screen and (max-width:500px) {
+    .Our-Beast-Cars .products .product1 {
+        width: 90% !important;
+        min-height: 500px !important;
+    }  
+}
+.search-page #buttons{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.ftr{
+   overflow: hidden; 
+}
+.live-action .show-sction .flow .View-Auction,
+.live-action .show-sction .flow .Auction-Participation {
+    border: none;
+    padding: 20px 5%;
+    border-radius: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    margin-top: 10%;
+    font-size: 20px;
+    cursor: pointer;
+}
+.live-action .show-sction .flow .View-Auction {
+    margin-top: 5%;
+}
+.live-action .show-sction .flow .View-Auction:hover,
+.live-action .show-sction .flow .Auction-Participation:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.live-action .chat-action {
+    width: 20%;
+    height: auto;
+    background-color: rgba(90, 86, 86, 0.712);
+    border-top: #00000086;
+}
+.veiw {
+    display: flex;
+    align-items: baseline;
+}
+.live-action .chat-action .live {
+    padding: 8px 30px;
+    margin: 15px 0px 0px 15px;
+    background-color: #990000;
+    border: none;
+    border-radius: 12px;
+}
+.live-action .chat-action .count {
+    padding: 5px 20px;
+    margin: 15px 5px 0px 5px;
+    background-color: #aeabab;
+    border: none;
+    border-radius: 30px;
+    color: #ffffff;
+}
+.live-action .chat-action .count i {
+    color: #ffffff;
+    padding-right: 3px;
+}
+
+/* Chat Container Styling */
+.chat {
+    position: relative;
+    width: 250px;
+    height: 500px;
+    overflow-y: auto;
+    margin: 10px auto;
+    background-color: rgba(90, 86, 86, 0.712);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(90, 86, 86, 0.712);
+}
+.chat::-webkit-scrollbar {
+    display: none;
+}
+
+/* Chat Message Styling */
+.chat-1 {
+    margin: 10px 0;
+    border: 2px solid #ffffff;
+    background-color: #eac45200;
+    text-align: center;
+    border-radius: 30px;
+    padding: 5efpx 5px;
+    position: relative;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+/* Bitcoin Icon Styling */
+.chat-1 p .bi-currency-bitcoin {
+    font-size: 20px;
+    color: #eac452;
+    margin-right: 8px;
+    position: absolute;
+    font-size: 40px;
+    top: 8%;
+    left: 4%;
+}
+
+/* ///////////////////////details///////////////////// */
+.details {
+    /* margin: auto; */
+    width: 100%;
+}
+/* .live-action .show-sction .title-details {
+    top: 0%;
+    left: 0px;
+    display: inline;
+} */
+
+.live-action .show-sction .info-details {
+    /* width: 40%;
+    top: 50%;
+    left: 0px; */
+    font-size: 15px;
+}
+.live-action .show-sction .side_img {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+.side_img::-webkit-scrollbar {
+    display: none;
+}
+.live-action .show-sction .side_img img {
+    width: 150px;
+    margin: 10px 0px;
+    border: 3px solid #eac452;
+    border-radius: 12px;
+}
+.live-action .show-sction .details-Opening-price {
+    /* top: 0;
+    left: 80%; */
+    text-align: center;
+    font-size: 20px;
+}
+.live-action .show-sction .image img {
+    width: 700px;
+
+    /* position: absolute;
+    top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+}
+.live-action .details .information {
+    /* position: absolute;
+    top: 60%;
+    left: 50%; */
+    /* width: 450px;
+    height: 200px; */
+    overflow: hidden;
+    overflow-y: auto;
+}
+.information::-webkit-scrollbar {
+    display: none;
+}
+.div123 {
+    display: flex;
+    width: 100%;
+}
+
+.live-action .details .information .discrption {
+    margin-right: 200px;
+}
+.live-action .details .information .ifo-discription {
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    padding: 5px 15px;
+}
+.discrption:hover {
+    text-decoration: underline;
+}
+.live-action .details .information .ifo-discription .p1 {
+    width: 10px;
+    height: 200px;
+    background-color: #99005e;
+    margin-top: 50px;
+}
+.effect-2 {
+    position: absolute;
+    width: 150px;
+    height: 120px;
+    border-radius: 100px;
+    border-bottom-left-radius: 2000px;
+    border-bottom-right-radius: 2000px;
+    border-top-left-radius: 2000px;
+    border-top-right-radius: 5000px;
+    background-color: #ffffffaf;
+    box-shadow: 1px 1px 50px 200px #69fcf2d7;
+    opacity: 0.7;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ///////////////////////////contuct us/////////////////////////// */
+
+.wrapper {
+    width: 90%;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: -80px;
+}
+.wrapper #buttons {
+    display: flex !important;
+    justify-content: space-between;
+}
+.search{
+    position: relative;
+}
+.menu a{
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    color: #fff !important;
+}
+ .menu a.router-link-exact-active{
+    font-weight: 900 !important;
+    transition: 0.3s;
+    text-decoration: none !important;
+    color: #eac452 !important;
+}
+.nav .btn1{
+    text-decoration: none;
+padding: 4px 20px;
+}
+.search i{
+    position: absolute;
+    left: 20px;
+    color: #b6b6b6;
+    font-size: 18px;
+    top: 11px;
+}
+.button-value {
+    border: 2px solid #eac452;
+    padding: 1em 4.2em;
+    border-radius: 3em;
+    background-color: transparent;
+    color: #eac452;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: 0.5s;
+}
+.button-value:hover {
+    scale: 1.05;
+}
+.active {
+    background-color: #eac452;
+    color: #ffffff;
+}
+.filter-til {
+    color: #000;
+    margin-top: 10%;
+    margin-left: 50px;
+}
+.chat{
+    max-height: 60vh !important;
+}
+.live-action .chat-action {
+    max-height: 75vh !important;
+}

@@ -1,0 +1,431 @@
+@media screen and (max-width: 678px) {
+    .thumbnail{
+        justify-content: start;
+    }
+    .slider .list .item .content h2{
+        font-size: 30px;
+    }
+    .slider .list .item .content p{
+        font-size: 12px;
+    }
+
+    .arrows{
+        top: 12%;
+        
+    }
+    
+    header .nav {
+        /* width:50%; */
+        height: auto;
+    }
+  
+    header .nav .logo{
+        font-size: 20px;
+        padding: 10px 0px;
+        
+    }
+    .btn{
+        display: none;
+    }
+    header .nav .menu{
+        display: none;
+    }
+    header .nav .toggle_btn .header-icon{
+        display: block;
+    }
+   
+    header .nav .dropdown_menu{
+       display: flex;
+       flex-direction: column;
+        position: absolute;
+        padding: 5px;
+        right: 2rem;
+        top: 60px;
+        height: auto;
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(45px);
+        text-align: center;
+        border-bottom-left-radius:30px ;
+        border-bottom-right-radius:30px ;
+        border-top-left-radius:30px ;
+        overflow: hidden;
+        animation-name: dropdown_menu ;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+
+    }
+    @keyframes dropdown_menu {
+        from{
+            transform: translateY(-20px);
+        }
+        to{
+            transform: translateY(0px);
+
+        }
+    }
+    header .nav .dropdown_menu.open {
+        height: 240px;
+        display: block;
+    }
+    header .nav .dropdown_menu li{
+        padding: 0.7rem;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header  .nav .dropdown_menu li a{
+        text-decoration: none;
+        color: #fdf8f8 !important;
+    }
+    header .nav .dropdown_menu a{
+        padding: 10px;
+        text-decoration: none;
+        color: #fdf8f8 !important;
+    }
+  
+    /* ///////////////////////////////Experience-cars//////////////////////////////// */
+
+    .Experience-cars .Experience-cars-title ,.Our-Beast-Cars .Our-Beast-cars-title ,.Services-section .Services-title{
+        font-size: 20px;
+        margin-left: 40px;
+    }
+    .Experience-cars .cards .card1,.Experience-cars .cards .card2,.Experience-cars .cards .card3{
+        margin: 30px auto ;
+        width: 250px;
+        height:350px;
+    }
+    .Experience-cars .cards .card1 .info-card,.Experience-cars .cards .card2 .info-card, .Experience-cars .cards .card3 .info-card{
+        width: 200px;
+        height: 80px;
+        font-size:12px;
+        border-radius: 8px;
+    }
+    /* //////////////////////////////Our-Beast-Cars/////////////////////////////// */
+
+    .Our-Beast-Cars .products .product1{
+        width:70%;
+        height: 450px;
+        font-size: 12px;
+    }
+    .Our-Beast-Cars .products .product1 .pr1 .btn-planner{
+        width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    }
+    .Our-Beast-Cars .products .product1 .pr1 {
+      line-height: 5px;
+    }
+    .Our-Beast-Cars .products .product1 .pr2 .pr2-p1{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .Our-Beast-Cars .products .product1 .pr2 i{
+        font-size: 20px;
+    }
+    .Our-Beast-Cars .products .product1 .pr2 .prs{
+        font-size: 12px;
+    }
+/* ////////////////////////////Auction//////////////////////////// */
+.add-auction .auction{
+    width: 80%;
+}
+.add-auction .auction .action-info{
+    width: 100%;
+    margin:auto;
+}
+
+.add-auction .auction .action-info .auction-title{
+ font-size:25px;
+}
+.add-auction .auction .action-info .action-span1 .auction-span{
+ font-size:12px;
+}
+.add-auction .auction .action-info .add-product-btn{
+    width: 80%;
+    font-size:20px ;
+}
+.add-auction .auction .auction-img{
+    display: none;
+}
+
+/* /////////////////////////////Services-section///////////////////////////// */
+
+.Services-section .Services{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.Services-section .Services-title{
+    margin-left:50px ;
+  
+}
+.Services-section .Services .effect{
+  
+    height: 2200px;
+    width:50% ;
+    opacity: 0.3;
+}
+.Services-section .Services .div1{
+    height: 250px;
+    width: auto;
+}
+.Services-section .Services .div1 .divflow i{
+    font-size: 40px;
+}
+.Services-section .Services .div1 .divflow h3{
+    font-size: 15px;
+}
+.Services-section .Services .div1 .divflow span{
+    font-size: 12px;
+}
+/* ///////////////////////footer///////////////////////////////////////////// */
+
+.ftr .container {
+    font-size: 12px;
+}
+.ftr .container .info-pages .title-ftr-pages{
+    font-size: 20px;
+}
+.ftr .container .info-pages  .ftr-link{
+font-size: 12px;
+}
+.ftr .container .info-pages  .h{
+    font-size: 12px;
+   padding-top: 50px;
+    }
+.ftr .container .info-pages {
+    font-size: 12px;
+    margin-left: -60px;
+    }
+.ftr .container .info-pages i {
+   display: none;
+}
+.ftr .container .info-pages-2 {
+   padding-right: 20px;
+   margin-right: -40px;
+ }
+
+.ftr .container .info-input .info-overflow .title-info-input{
+    font-size: 15px;
+}
+
+.ftr .container .info-input {
+    font-weight: 800px;
+    margin: 0px 0px 0px 0px;
+}
+.ftr .container .info-input .info-overflow {
+    top: 65%;
+    left: 40%;
+}
+
+.ftr .container .info-input .info-overflow  .btn2{
+    width:100px;
+    padding: 10px;
+    font-size: smaller;
+    margin-left: 30px;
+}
+.ftr .container .info-input .info-overflow  .bn{
+    width: 125px;
+    
+}
+/* /////////////////////live- action-Participation///////////////////////// */
+.live-action{
+    display: flex;
+    flex-direction: column;
+}
+.live-action .show-sction{
+    font-size: 10px;
+}
+.live-action .show-sction .effect-2{
+    width:50px;
+    height: auto;
+    border-radius: 1000px;
+    right: 40%;
+    
+
+}
+.live-action .show-sction .title-car{
+    top: 5%;
+    font-size: 20px;
+}
+.live-action .show-sction .Opening-price{
+    top: 18%;
+    font-size: 15px;
+    left: 0%;
+    width: 200px;
+}
+.live-action .show-sction .image img{
+    width: 400px;
+    left: 60%;
+    
+
+}
+
+.live-action .show-sction .flow-bidding-box{
+    width: 350px;
+    height: 40px;
+    top: 88%;
+    left:8%;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    
+}
+.live-action .show-sction .info-car{
+    top:33%;
+}
+.live-action .show-sction .flow-bidding-box .input-pay{
+    width: 200px;
+    height: 40px;
+    margin-top: 5%;
+}
+.live-action .show-sction .flow-bidding-box .input-pay .text{
+    height: 35px;
+}
+.live-action .show-sction .flow-bidding-box .bid{
+    width: 100px;
+    font-size: 20px;
+}
+
+.live-action .chat-action{
+    position: absolute;
+    top: -5%;
+    left:50%;
+    font-size: 12px;
+    background-color: rgba(0, 255, 255, 0);
+}
+.live-action .chat-action .veiw{
+    
+    display: flex;
+    align-items: baseline;
+    width: 200px;
+
+}
+.live-action .chat-action .chat{
+    position: absolute;
+    top: 700%;
+    height: 200px;
+    width: 170px;
+}
+.live-action .chat-action .chat .chat-1{
+    width: 150px;
+    height:40px;
+    font-size: 12px;
+    margin: 10px 0px;
+}
+.live-action .chat-action .chat .chat-1 p .bi-currency-bitcoin{
+    font-size: 30px;
+}
+.live-action .show-sction .flow{
+    left: 63.5%;
+    width:300px;
+}
+.live-action .show-sction .flow  .Auction-Participation{
+   
+    margin-top:30%;
+}
+
+.live-action .show-sction .flow .popup-page ,.popup{
+
+    font-size: 10px;
+
+}
+.live-action .show-sction .popup ,.popup{
+    left: 5%;
+    width: 200px;
+  
+ }
+.live-action .show-sction .popup .content,.popup .content{
+   left: -100%;
+   width: 280px;
+}
+.content
+/* /////////////details////////////// */
+.live-action .details{
+    overflow: hidden;
+}
+.live-action .details .information .discrption{
+    margin-right: 10px;
+   
+}
+.live-action .show-sction .information{
+    right: -3%;
+    top:83%;
+    width: 50%;
+    height: 100px;
+}
+
+
+.live-action .show-sction .info-details{
+
+    top:59%;
+    font-size: 12px;
+    width: 180px;
+}
+.live-action .show-sction .side_img{
+   top: 25%;
+    right: 0%;
+    width: auto;
+    height: 200px;
+    
+}
+.live-action .show-sction .side_img img{
+    width: 100px;
+
+}
+
+
+/* ////////////////filter////////////////// */
+.wrapper div .button-value{
+    width: 150px;
+    font-size: 10px;   
+    margin: 10px 5px;
+}
+.filter-til{
+    margin-top: 20%;
+    margin-bottom: 0px;
+}
+}
+
+/* ////////////////////////////////////////////// */
+
+
+
+
+
+
+
+@media (max-width: 678px) {
+    .flow-bidding-box {
+        right: 10%;
+        top: 60%;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .input-pay {
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 15px;
+    }
+
+    .text {
+        width: 100px;
+    }
+
+    .bid {
+        width: 100%;
+    }
+    /* Responsive Design */
+    .products {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .product1 {
+        width: 90%;
+        max-width: 500px;
+      }
+}
